@@ -22,7 +22,10 @@
       "Bash(chmod +x /Users/macprowzb/work/astro-blog/scripts/publish-to-vercel.sh)",
       "Bash(npm install:*)",
       "Bash(node:*)",
-      "Bash(mv:*)"
+      "Bash(mv:*)",
+      "Bash(/Users/macprowzb/work/astro-blog/scripts/publish-to-vercel.sh:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)"
     ]
   }
 }
