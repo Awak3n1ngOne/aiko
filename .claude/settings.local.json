@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run:*)",
+      "WebFetch(domain:astro.build)",
+      "WebSearch",
+      "WebFetch(domain:github.com)",
+      "Bash(curl -s \"https://api.github.com/repos/michael-andreuzza/bearnie/contents/src/components\")",
+      "Bash(python3 -c \"import json,sys; data=json.load\\(sys.stdin\\); [print\\(d['name'], d['type']\\) for d in data]\")",
+      "Bash(curl -s \"https://api.github.com/repos/michael-andreuzza/bearnie/contents/src/components/ui\")",
+      "Bash(python3 -c \"import json,sys; data=json.load\\(sys.stdin\\); [print\\(d['name']\\) for d in data]\")",
+      "Bash(curl -s \"https://api.github.com/repos/michael-andreuzza/bearnie/contents/src/components/ui/badge\")",
+      "Bash(python3 -c \"import json,sys; data=json.load\\(sys.stdin\\); print\\(data[0]['name']\\)\")",
+      "Bash(curl:*)",
+      "Bash(mkdir -p /Users/macprowzb/work/blog/src/components/bearnie/badge)",
+      "WebFetch(domain:bearnie.dev)",
+      "WebFetch(domain:next.jqueryscript.net)",
+      "WebFetch(domain:www.reddit.com)",
+      "Bash(git push:*)",
+      "Bash(git config:*)",
+      "Bash(git remote:*)"
+    ]
+  }
+}

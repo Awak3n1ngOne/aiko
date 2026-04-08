@@ -1,0 +1,45 @@
+---
+import Breadcrumb from "@/components/Breadcrumb.astro";
+import { SITE } from "@/config";
+
+type StringTitle = { pageTitle: string };
+type ArrayTitle = { pageTitle: [string, string]; titleTransition: string };
+
+type Props = (StringTitle | ArrayTitle) & { pageDesc?: string };
+
+const { props } = Astro;
+
+const backUrl = SITE.showBackButton ? Astro.url.pathname : "/";
+---
+
+<main data-backUrl={backUrl} id="main-content" class="grow">
+  <div class="max-w-screen 2xl:max-w-350 mx-auto px-8 w-full py-12">
+    {
+      "titleTransition" in props ? (
+        <h1 class="text-2xl font-medium tracking-tight sm:text-3xl">
+          {props.pageTitle[0]}
+          <span transition:name={props.titleTransition}>
+            {props.pageTitle[1]}
+          </span>
+        </h1>
+      ) : (
+        <h1 class="text-2xl font-medium tracking-tight sm:text-3xl">{props.pageTitle}</h1>
+      )
+    }
+    {props.pageDesc && <p class="mt-2 text-sm text-muted-foreground">{props.pageDesc}</p>}
+    <div class="mt-8">
+      <slot />
+    </div>
+  </div>
+</main>
+
+<script>
+  document.addEventListener("astro:page-load", () => {
+    const mainContent: HTMLElement | null =
+      document.querySelector("#main-content");
+    const backUrl = mainContent?.dataset?.backurl;
+    if (backUrl) {
+      sessionStorage.setItem("backUrl", backUrl);
+    }
+  });
+</script>

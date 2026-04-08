@@ -1,0 +1,133 @@
+---
+import IconX from "@/assets/icons/IconX.svg";
+import IconMoon from "@/assets/icons/IconMoon.svg";
+import IconSearch from "@/assets/icons/IconSearch.svg";
+import IconArchive from "@/assets/icons/IconArchive.svg";
+import IconSunHigh from "@/assets/icons/IconSunHigh.svg";
+import IconMenuDeep from "@/assets/icons/IconMenuDeep.svg";
+import { SITE } from "@/config";
+
+const { pathname } = Astro.url;
+
+const currentPath =
+  pathname.endsWith("/") && pathname !== "/" ? pathname.slice(0, -1) : pathname;
+
+const isActive = (path: string) => {
+  const currentPathArray = currentPath.split("/").filter(p => p.trim());
+  const pathArray = path.split("/").filter(p => p.trim());
+  return currentPath === path || currentPathArray[0] === pathArray[0];
+};
+---
+
+<header class="sticky top-0 z-50 w-full bg-background">
+  <div class="max-w-screen 2xl:max-w-350 mx-auto px-8 w-full">
+    <div class="mx-auto flex items-center justify-between py-4">
+      <a href="/" class="font-semibold">
+        {SITE.title}
+      </a>
+      <div class="flex items-center gap-4">
+        <nav class="hidden items-center gap-6 text-sm md:flex">
+          <a
+            href="/posts"
+            class:list={[
+              "transition-colors",
+              isActive("/posts") ? "text-foreground" : "text-muted-foreground hover:text-foreground",
+              { "active-nav text-foreground": isActive("/posts") },
+            ]}
+          >
+            Posts
+          </a>
+          <a
+            href="/tags"
+            class:list={[
+              "transition-colors",
+              isActive("/tags") ? "text-foreground" : "text-muted-foreground hover:text-foreground",
+              { "active-nav text-foreground": isActive("/tags") },
+            ]}
+          >
+            Tags
+          </a>
+          <a
+            href="/about"
+            class:list={[
+              "transition-colors",
+              isActive("/about") ? "text-foreground" : "text-muted-foreground hover:text-foreground",
+              { "active-nav text-foreground": isActive("/about") },
+            ]}
+          >
+            About
+          </a>
+          {SITE.showArchives && (
+            <a
+              href="/archives"
+              class:list={[
+                "transition-colors",
+                isActive("/archives") ? "text-foreground" : "text-muted-foreground hover:text-foreground",
+                { "active-nav text-foreground": isActive("/archives") },
+              ]}
+            >
+              Archives
+            </a>
+          )}
+        </nav>
+        <div class="flex items-center gap-2">
+          <a
+            href="/search"
+            class="inline-flex items-center justify-center size-7 text-xs text-muted-foreground hover:text-foreground transition-colors"
+            title="Search"
+            aria-label="search"
+          >
+            <IconSearch class="size-3.5" />
+          </a>
+          <button
+            id="theme-btn"
+            class="inline-flex items-center justify-center size-7 text-xs text-muted-foreground hover:text-foreground transition-colors"
+            title="Toggle theme"
+            aria-label="Toggle theme"
+          >
+            <IconMoon class="size-7 dark:hidden" />
+            <IconSunHigh class="size-7 hidden dark:block" />
+          </button>
+          <button
+            id="menu-btn"
+            class="inline-flex items-center justify-center size-7 text-xs text-muted-foreground hover:text-foreground transition-colors md:hidden"
+            aria-label="Open Menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <IconMenuDeep class="size-4" />
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- Mobile Menu -->
+    <div
+      id="mobile-menu"
+      class="hidden md:hidden"
+    >
+      <nav class="flex flex-col gap-2 py-4 text-sm">
+        <a href="/posts" class="py-2 text-muted-foreground hover:text-foreground transition-colors">Posts</a>
+        <a href="/tags" class="py-2 text-muted-foreground hover:text-foreground transition-colors">Tags</a>
+        <a href="/about" class="py-2 text-muted-foreground hover:text-foreground transition-colors">About</a>
+        {SITE.showArchives && (
+          <a href="/archives" class="py-2 text-muted-foreground hover:text-foreground transition-colors">Archives</a>
+        )}
+      </nav>
+    </div>
+  </div>
+</header>
+
+<script>
+  function toggleMobileNav() {
+    const menuBtn = document.querySelector("#menu-btn");
+    const mobileMenu = document.querySelector("#mobile-menu");
+    if (!menuBtn || !mobileMenu) return;
+    menuBtn.addEventListener("click", () => {
+      const isOpen = mobileMenu.classList.contains("hidden");
+      mobileMenu.classList.toggle("hidden", !isOpen);
+      menuBtn.setAttribute("aria-expanded", isOpen ? "true" : "false");
+    });
+  }
+  toggleMobileNav();
+  document.addEventListener("astro:after-swap", toggleMobileNav);
+</script>

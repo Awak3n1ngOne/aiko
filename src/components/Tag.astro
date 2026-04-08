@@ -1,0 +1,25 @@
+---
+import Badge from "@/components/bearnie/badge/Badge.astro";
+
+type Props = {
+  tag: string;
+  tagName: string;
+  size?: "sm" | "lg";
+};
+
+const { tag, tagName, size = "lg" } = Astro.props;
+---
+
+<li>
+  <Badge
+    href={`/tags/${tag}/`}
+    variant="outline"
+    transition:name={tag}
+    class:list={[
+      { "text-xs": size === "sm" },
+      { "text-sm px-3 py-1": size === "lg" },
+    ]}
+  >
+    {tagName}
+  </Badge>
+</li>

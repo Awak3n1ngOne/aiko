@@ -1,0 +1,16 @@
+---
+import Socials from "./Socials.astro";
+
+const currentYear = new Date().getFullYear();
+---
+
+<footer>
+  <div class="max-w-screen 2xl:max-w-350 mx-auto px-8 w-full py-8">
+    <div class="flex items-center justify-center gap-6 text-sm text-muted-foreground">
+      <Socials />
+      <span class="border-l border-border pl-6">
+        &copy; {currentYear} All rights reserved.
+      </span>
+    </div>
+  </div>
+</footer>

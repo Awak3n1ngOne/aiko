@@ -1,0 +1,36 @@
+---
+import type { CollectionEntry } from "astro:content";
+import { getPath } from "@/utils/getPath";
+
+type Props = {
+  variant?: "h2" | "h3";
+} & CollectionEntry<"blog">;
+
+const { variant: Heading = "h2", id, data, filePath } = Astro.props;
+const { title, description, pubDatetime, modDatetime } = data;
+
+const dateStr = modDatetime
+  ? modDatetime.toISOString().split("T")[0]
+  : pubDatetime?.toISOString().split("T")[0] || "";
+---
+
+<li>
+  <a
+    href={getPath(id, filePath)}
+    class="group block"
+  >
+    <Heading class="text-base sm:text-lg font-medium tracking-tight text-foreground group-hover:text-accent transition-colors">
+      {title}
+    </Heading>
+    {description && (
+      <p class="mt-1 text-sm text-muted-foreground line-clamp-2">
+        {description}
+      </p>
+    )}
+    {dateStr && (
+      <time class="mt-1 block text-xs font-mono text-muted-foreground">
+        {dateStr}
+      </time>
+    )}
+  </a>
+</li>

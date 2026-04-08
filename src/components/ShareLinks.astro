@@ -1,0 +1,27 @@
+---
+import { SHARE_LINKS } from "@/constants";
+
+const URL = Astro.url;
+---
+
+{
+  SHARE_LINKS.length > 0 && (
+    <div class="flex flex-none flex-col items-center justify-center gap-1 md:items-start">
+      <span class="text-xs text-muted-foreground">Share this post on:</span>
+      <div class="flex items-center gap-2">
+        {SHARE_LINKS.map(social => (
+          <a
+            href={`${social.href + URL}`}
+            class="inline-flex items-center justify-center size-7 text-muted-foreground hover:text-foreground transition-colors"
+            title={social.linkTitle}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <social.icon class="size-4" />
+            <span class="sr-only">{social.linkTitle}</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  )
+}

@@ -1,0 +1,27 @@
+---
+import { SOCIALS } from "@/constants";
+
+const iconSizes: Record<string, string> = {
+  github: "size-4",
+  mail: "size-4",
+  twitter: "size-4",
+  linkedin: "size-4",
+};
+---
+
+<div class="flex items-center gap-3">
+  {
+    SOCIALS.map(social => (
+      <a
+        href={social.href}
+        class="text-muted-foreground hover:text-foreground transition-colors"
+        title={social.linkTitle}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <social.icon class="size-4" />
+        <span class="sr-only">{social.linkTitle}</span>
+      </a>
+    ))
+  }
+</div>

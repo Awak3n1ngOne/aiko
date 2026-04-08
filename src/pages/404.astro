@@ -1,0 +1,25 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+import { SITE } from "@/config";
+---
+
+<Layout title={`404 Not Found | ${SITE.title}`}>
+  <Header />
+
+  <main id="main-content" class="grow flex items-center justify-center">
+    <div class="max-w-screen 2xl:max-w-350 mx-auto px-8 w-full py-12 text-center">
+      <h1 class="text-6xl font-mono font-medium text-accent">404</h1>
+      <p class="mt-4 text-lg text-muted-foreground">Page not found</p>
+      <a
+        href="/"
+        class="mt-6 inline-flex items-center gap-1 text-sm text-foreground hover:text-accent transition-colors underline decoration-dashed underline-offset-4"
+      >
+        Go back home
+      </a>
+    </div>
+  </main>
+
+  <Footer />
+</Layout>

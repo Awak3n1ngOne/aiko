@@ -1,0 +1,61 @@
+---
+import IconArrowNarrowUp from "@/assets/icons/IconArrowNarrowUp.svg";
+---
+
+<div
+  id="btt-btn-container"
+  class:list={[
+    "fixed end-4 bottom-8 z-50",
+    "translate-y-14 opacity-0 transition duration-500",
+  ]}
+>
+  <button
+    data-button="back-to-top"
+    class="inline-flex items-center justify-center size-9 rounded-sm bg-background text-foreground border border-border shadow-none hover:text-accent transition-colors"
+  >
+    <IconArrowNarrowUp class="size-4" />
+    <span class="sr-only">Back To Top</span>
+  </button>
+</div>
+
+<script is:inline data-astro-rerun>
+  function backToTop() {
+    const rootElement = document.documentElement;
+    const btnContainer = document.querySelector("#btt-btn-container");
+    const backToTopBtn = document.querySelector("[data-button='back-to-top']");
+
+    if (!rootElement || !btnContainer || !backToTopBtn) return;
+
+    backToTopBtn.addEventListener("click", () => {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    });
+
+    let lastVisible = null;
+    function handleScroll() {
+      const scrollTotal = rootElement.scrollHeight - rootElement.clientHeight;
+      const scrollTop = rootElement.scrollTop;
+      const isVisible = scrollTop / scrollTotal > 0.3;
+
+      if (isVisible !== lastVisible) {
+        btnContainer.classList.toggle("opacity-100", isVisible);
+        btnContainer.classList.toggle("translate-y-0", isVisible);
+        btnContainer.classList.toggle("opacity-0", !isVisible);
+        btnContainer.classList.toggle("translate-y-14", !isVisible);
+        lastVisible = isVisible;
+      }
+    }
+
+    let ticking = false;
+    document.addEventListener("scroll", () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          handleScroll();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    });
+  }
+  backToTop();
+</script>

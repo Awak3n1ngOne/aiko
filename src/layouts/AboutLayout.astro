@@ -1,0 +1,24 @@
+---
+import type { MarkdownLayoutProps } from "astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+import Layout from "./Layout.astro";
+import { SITE } from "@/config";
+
+type Props = MarkdownLayoutProps<{ title: string }>;
+
+const { frontmatter } = Astro.props;
+---
+
+<Layout title={`${frontmatter.title} | ${SITE.title}`}>
+  <Header />
+  <main id="main-content" class="grow">
+    <div class="max-w-screen 2xl:max-w-350 mx-auto px-8 w-full py-12">
+      <section id="about" class="app-prose max-w-app prose-img:border-0">
+        <h1 class="text-2xl font-medium tracking-tight sm:text-3xl">{frontmatter.title}</h1>
+        <slot />
+      </section>
+    </div>
+  </main>
+  <Footer />
+</Layout>
