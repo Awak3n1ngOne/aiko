@@ -25,7 +25,8 @@
       "Bash(mv:*)",
       "Bash(/Users/macprowzb/work/astro-blog/scripts/publish-to-vercel.sh:*)",
       "Bash(git add:*)",
-      "Bash(git commit:*)"
+      "Bash(git commit:*)",
+      "Bash(pnpm build:*)"
     ]
   }
 }
