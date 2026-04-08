@@ -18,7 +18,11 @@
       "WebFetch(domain:www.reddit.com)",
       "Bash(git push:*)",
       "Bash(git config:*)",
-      "Bash(git remote:*)"
+      "Bash(git remote:*)",
+      "Bash(chmod +x /Users/macprowzb/work/astro-blog/scripts/publish-to-vercel.sh)",
+      "Bash(npm install:*)",
+      "Bash(node:*)",
+      "Bash(mv:*)"
     ]
   }
 }
