@@ -147,8 +147,8 @@ function convertFile(sourceFile) {
   let convertedContent = convertWikiLinks(content);
   convertedContent = convertHighlights(convertedContent);
 
-  // 构建 Astro frontmatter
-  const frontmatter = `---
+  // 构建 Astro frontmatter（不包含空的 ogImage）
+  let frontmatter = `---
 author: ${AUTHOR}
 pubDatetime: ${formatDate()}
 title: ${title}
@@ -156,7 +156,6 @@ featured: false
 draft: false
 tags:
 ${tags.map(t => '  - ' + t).join('\n')}
-ogImage:
 description: ${description}
 ---`;
 

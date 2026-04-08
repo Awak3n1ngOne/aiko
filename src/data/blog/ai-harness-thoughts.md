@@ -6,7 +6,6 @@ featured: false
 draft: false
 tags:
   - AI
-ogImage:
 description: 最近几个月废寝忘食的研究AI和AIHarness，实践了好多，也有很多思考想表达。从6个月到2天的效率飞跃，探讨AI Harness如何重塑生产力关系。
 ---
 

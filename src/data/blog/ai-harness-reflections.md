@@ -8,7 +8,6 @@ tags:
   - AI
   - Harness
   - 思考
-ogImage: 
 description: 从 6 个月到 3 周再到 2 天的开发历程，探讨 AI Harness 如何重塑生产力关系，以及每个人该如何拥抱这场变革。
 ---
 
