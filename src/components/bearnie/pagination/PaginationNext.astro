@@ -1,7 +1,7 @@
 ---
 import { cn } from "@/utils/cn";
 import type { HTMLAttributes } from "astro/types";
-import ChevronRight from "@lucide/astro/icons/chevron-right";
+import IconChevronRight from "@/assets/icons/IconChevronRight.svg";
 
 export interface Props extends HTMLAttributes<"a"> {
   href?: string;
@@ -23,5 +23,5 @@ const classes = cn(
 
 <a href={href} aria-label="Go to next page" class={classes} {...props}>
   <span><slot>Next</slot></span>
-  <ChevronRight class="size-4" />
+  <IconChevronRight class="size-4" />
 </a>

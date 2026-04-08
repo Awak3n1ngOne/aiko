@@ -1,3 +1,6 @@
+/// <reference path="../.astro/types.d.ts" />
+/// <reference types="astro/client" />
+
 interface Window {
   theme?: {
     themeValue: string;
@@ -6,4 +9,5 @@ interface Window {
     getTheme: () => string;
     setTheme: (val: string) => void;
   };
+  __themeResolved?: string;
 }

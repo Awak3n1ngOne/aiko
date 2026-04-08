@@ -6,7 +6,7 @@ featured: false
 draft: false
 tags:
   - AI
-description: **最近几个月废寝忘食的研究AI 和AI Harness， 实践了好多，也有很多思考想表达** **从我把之前需要6个月的开发工作量， 缩减到vibe coding下的3周，再缩减到Harness工程下的两天** **一举飞跃我司产品力，推到CRM行业前沿** **我就切身体会到，未来社会的是对AI...
+description: "最近几个月废寝忘食的研究AI 和AI Harness， 实践了好多，也有很多思考想表达"
 ---
 
 
