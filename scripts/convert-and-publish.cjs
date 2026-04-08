@@ -148,15 +148,16 @@ function convertFile(sourceFile) {
   convertedContent = convertHighlights(convertedContent);
 
   // 构建 Astro frontmatter（不包含空的 ogImage）
+  // 用双引号包裹 description，避免 YAML 特殊字符（冒号、星号等）导致解析错误
   let frontmatter = `---
 author: ${AUTHOR}
 pubDatetime: ${formatDate()}
-title: ${title}
+title: "${title.replace(/"/g, '\\"')}"
 featured: false
 draft: false
 tags:
 ${tags.map(t => '  - ' + t).join('\n')}
-description: ${description}
+description: "${description.replace(/"/g, '\\"')}"
 ---`;
 
   // 组合最终内容
