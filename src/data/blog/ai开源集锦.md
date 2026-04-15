@@ -1,12 +1,12 @@
 ---
 author: wzb
-pubDatetime: 2026-04-14T01:03:53.614Z
+pubDatetime: 2026-04-15T01:55:36.643Z
 title: "AI开源集锦"
 featured: false
 draft: false
 tags:
   - how-it-works
-  - 编程
+  - AI
 description: "| | | |---|---| |nanobot|[https://github.com/HKUDS/nanobot/tree/main](https://github.com/HKUDS/nanobot/tree/main)| |learn Claude Code|[https://github...."
 ---
 
@@ -26,19 +26,21 @@ description: "| | | |---|---| |nanobot|[https://github.com/HKUDS/nanobot/tree/ma
 
 ### 智能体进化框架
 
-[ht](https://github.com/HKUDS/OpenSpace)
-
 |   |   |   |
 |---|---|---|
 |OpenSpace|[tps://github.com/HKUDS/OpenSpace](https://github.com/HKUDS/OpenSpace)||
 ||||
 
-### 智能体插件
 
-|   |   |   |
-|---|---|---|
-|OpenSpec|[https://github.com/Fission-AI/OpenSpec](https://github.com/Fission-AI/OpenSpec)||
-|spec-kit|[https://github.com/github/spec-kit](https://github.com/github/spec-kit)||
+### 智能体编排
+
+|               |                                                                                  |     |
+| ------------- | -------------------------------------------------------------------------------- | --- |
+| OpenSpec      | [https://github.com/Fission-AI/OpenSpec](https://github.com/Fission-AI/OpenSpec) |     |
+| spec-kit      | [https://github.com/github/spec-kit](https://github.com/github/spec-kit)         |     |
+| agency-agents | https://github.com/msitarzewski/agency-agents                                    |     |
+| multica       | https://multica.ai/                                                              |     |
+
 
 ### 文件数据库
 
@@ -72,6 +74,7 @@ description: "| | | |---|---| |nanobot|[https://github.com/HKUDS/nanobot/tree/ma
 |VibeVoice|[https://github.com/microsoft/VibeVoice?tab=readme-ov-file](https://github.com/microsoft/VibeVoice?tab=readme-ov-file)|
 |||
 
+
 ### UI相关
 
 |   |   |   |
@@ -91,13 +94,13 @@ description: "| | | |---|---| |nanobot|[https://github.com/HKUDS/nanobot/tree/ma
 
 ### skill
 
-|     |                                                                                                                      |
-| --- | -------------------------------------------------------------------------------------------------------------------- |
-|     | [https://x.com/GoogleCloudTech/status/2033953579824758855](https://x.com/GoogleCloudTech/status/2033953579824758855) |
-|     |                                                                                                                      |
+|                                  |                                                                                                                      |
+| -------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+|                                  | [https://x.com/GoogleCloudTech/status/2033953579824758855](https://x.com/GoogleCloudTech/status/2033953579824758855) |
+| fireworks-tech-graph <br>（架构图利器） | https://github.com/yizhiyanhua-ai/fireworks-tech-graph/blob/main/README.zh.md                                        |
 
 
-claude code
+最佳实践
 
 |                           |                                                           |
 | ------------------------- | --------------------------------------------------------- |
