@@ -8,7 +8,7 @@ export const SITE = {
   website: "https://myblog.com/",
   author: "My Name",
   profile: "https://github.com/username",
-  desc: "A minimalist tech blog built with Astro.",
+  desc: "AIKO Nexus' Thinking",
   title: "AIKO Nexus' Thinking",
   ogImage: "astropaper-og.jpg",
   lightAndDarkMode: true,
