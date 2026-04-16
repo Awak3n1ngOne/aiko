@@ -1,14 +1,15 @@
 ---
 author: wzb
-pubDatetime: 2026-04-15T01:55:36.643Z
+pubDatetime: 2026-04-16T03:32:13.808Z
 title: "AI开源集锦"
 featured: false
 draft: false
 tags:
   - how-it-works
   - AI
-description: "| | | |---|---| |nanobot|[https://github.com/HKUDS/nanobot/tree/main](https://github.com/HKUDS/nanobot/tree/main)| |learn Claude Code|[https://github...."
+description: "AI相关高质量开源库收录 | | | |---|---| |nanobot|[https://github.com/HKUDS/nanobot/tree/main](https://github.com/HKUDS/nanobot/tree/main)| |learn Claude Code|[ht..."
 ---
+AI相关高质量开源库收录
 
 ### 智能体
 
@@ -24,7 +25,7 @@ description: "| | | |---|---| |nanobot|[https://github.com/HKUDS/nanobot/tree/ma
 |deer-flow|[https://github.com/bytedance/deer-flow/tree/main](https://github.com/bytedance/deer-flow/tree/main)|
 |OpenHarness|[https://github.com/HKUDS/OpenHarness/tree/main](https://github.com/HKUDS/OpenHarness/tree/main)|
 
-### 智能体进化框架
+## 智能体进化框架
 
 |   |   |   |
 |---|---|---|
@@ -32,7 +33,7 @@ description: "| | | |---|---| |nanobot|[https://github.com/HKUDS/nanobot/tree/ma
 ||||
 
 
-### 智能体编排
+## 智能体编排
 
 |               |                                                                                  |     |
 | ------------- | -------------------------------------------------------------------------------- | --- |
@@ -42,16 +43,16 @@ description: "| | | |---|---| |nanobot|[https://github.com/HKUDS/nanobot/tree/ma
 | multica       | https://multica.ai/                                                              |     |
 
 
-### 文件数据库
+## 文件数据库
 
 |   |   |
 |---|---|
 |OpenViking|[https://github.com/volcengine/OpenViking/tree/main](https://github.com/volcengine/OpenViking/tree/main)|
 
   
-  
 
-### harness enginning 学习
+
+## harness enginning 学习
 
 |   |   |
 |---|---|
@@ -60,14 +61,14 @@ description: "| | | |---|---| |nanobot|[https://github.com/HKUDS/nanobot/tree/ma
 |claw0|[https://github.com/shareAI-lab/claw0/blob/main/README.zh.md](https://github.com/shareAI-lab/claw0/blob/main/README.zh.md)|
 |Hello-agent|https://hello-agents.datawhale.cc/#/./%E5%89%8D%E8%A8%80|
 
-### 聊天工具cli
+## cli
 
-|   |   |   |   |
-|---|---|---|---|
-|企微cli|[https://github.com/WecomTeam/wecom-cli](https://github.com/WecomTeam/wecom-cli)|||
-|飞书cli|[https://github.com/larksuite/cli](https://github.com/larksuite/cli)|||
+|       |                                                                                  |     |     |
+| ----- | -------------------------------------------------------------------------------- | --- | --- |
+| 企微cli | [https://github.com/WecomTeam/wecom-cli](https://github.com/WecomTeam/wecom-cli) |     |     |
+| 飞书cli | [https://github.com/larksuite/cli](https://github.com/larksuite/cli)             |     |     |
 
-### 语音识别
+## 语音识别
 
 |   |   |
 |---|---|
@@ -75,7 +76,7 @@ description: "| | | |---|---| |nanobot|[https://github.com/HKUDS/nanobot/tree/ma
 |||
 
 
-### UI相关
+## UI相关
 
 |   |   |   |
 |---|---|---|
@@ -83,25 +84,31 @@ description: "| | | |---|---| |nanobot|[https://github.com/HKUDS/nanobot/tree/ma
 |pencil|[https://www.pencil.dev/](https://www.pencil.dev/)||
 |json-render|[https://github.com/vercel-labs/json-render](https://github.com/vercel-labs/json-render)||
 
-|   |   |   |
-|---|---|---|
-|F-Droid|[https://github.com/plainhub/plain-app](https://github.com/plainhub/plain-app)||
-||||
+
 
 |   |   |
 |---|---|
 |openscreen|[https://github.com/siddharthvaddem/openscreen](https://github.com/siddharthvaddem/openscreen)|
 
-### skill
+## skill
 
-|                                  |                                                                                                                      |
-| -------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-|                                  | [https://x.com/GoogleCloudTech/status/2033953579824758855](https://x.com/GoogleCloudTech/status/2033953579824758855) |
-| fireworks-tech-graph <br>（架构图利器） | https://github.com/yizhiyanhua-ai/fireworks-tech-graph/blob/main/README.zh.md                                        |
+|                                   |                                                                                                                                                                                                                                                            |
+| --------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|                                   | [https://x.com/GoogleCloudTech/status/2033953579824758855](https://x.com/GoogleCloudTech/status/203395357982475885                                                                                                                                         |
+| fireworks-tech-graph <br>（架构图利器 ） | https://github.com/yizhiyanhua-ai/fireworks-tech-graph/blob/main/README.zh                                                                                                                                                                                 |
+| 如何写skill（claude官方指导文档）            | https://resources.anthropic.com/hubfs/The-Complete-Guide-to-Building-Skill-for-Claude                                                                                                                                                                      |
 
 
-最佳实践
+
+## 最佳实践
 
 |                           |                                                           |
 | ------------------------- | --------------------------------------------------------- |
 | claude-code-best-practice | https://github.com/shanraisshan/claude-code-best-practice |
+
+
+## 画图
+
+| reactflow | https://reactflow.dev/ |
+| --------- | ---------------------- |
+|           |                        |
