@@ -1,6 +1,6 @@
 ---
 author: wzb
-pubDatetime: 2026-04-16T03:32:13.808Z
+pubDatetime: 2026-04-16T10:01:54.821Z
 title: "AI开源集锦"
 featured: false
 draft: false
@@ -10,6 +10,9 @@ tags:
 description: "AI相关高质量开源库收录 | | | |---|---| |nanobot|[https://github.com/HKUDS/nanobot/tree/main](https://github.com/HKUDS/nanobot/tree/main)| |learn Claude Code|[ht..."
 ---
 AI相关高质量开源库收录
+
+
+
 
 ### 智能体
 
@@ -24,6 +27,11 @@ AI相关高质量开源库收录
 |langchain|[https://docs.langchain.com/oss/python/langchain/install](https://docs.langchain.com/oss/python/langchain/install)|
 |deer-flow|[https://github.com/bytedance/deer-flow/tree/main](https://github.com/bytedance/deer-flow/tree/main)|
 |OpenHarness|[https://github.com/HKUDS/OpenHarness/tree/main](https://github.com/HKUDS/OpenHarness/tree/main)|
+
+
+| 基于是视觉的智能体 | https://github.com/GetStream/vision-agents |
+| --------- | ------------------------------------------ |
+|           |                                            |
 
 ## 智能体进化框架
 
@@ -78,11 +86,12 @@ AI相关高质量开源库收录
 
 ## UI相关
 
-|   |   |   |
-|---|---|---|
-|uiuxpromax|[https://www.uupm.cc/#how-it-works](https://www.uupm.cc/#how-it-works)||
-|pencil|[https://www.pencil.dev/](https://www.pencil.dev/)||
-|json-render|[https://github.com/vercel-labs/json-render](https://github.com/vercel-labs/json-render)||
+|               |                                                                                                                  |     |
+| ------------- | ---------------------------------------------------------------------------------------------------------------- | --- |
+| uiuxpromax    | [https://www.uupm.cc/#how-it-works](https://www.uupm.cc/#how-it-works)                                           |     |
+| pencil        | [https://www.pencil.dev/](https://www.pencil.dev/)                                                               |     |
+| json-render   | [https://github.com/vercel-labs/json-render](https://github.com/vercel-labs/json-render)                         |     |
+| vercel ai-sdk | https://elements.ai-sdk.dev/  https://elements.ai-sdk.dev/components/attachments https://workflow-sdk.dev/worlds |     |
 
 
 
